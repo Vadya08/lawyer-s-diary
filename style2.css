@@ -1,0 +1,113 @@
+body {
+    background-color: #0e582d;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-left: 93%;
+
+}
+
+.arrow-link {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    background-color: #000000; /* Черный фон */
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.arrow-link:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.arrow-link:active {
+    transform: scale(1);
+    background-color: #388e3c;
+}
+
+.content {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.strok {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+.obz1, .obz2, .obz3, .obz4, .obz5 {
+    margin: 20px;
+    text-align: justify;
+    font-size: 1.2em;
+}
+
+.figyra {
+    margin: 20px;
+    padding: 20px;
+    border: solid 1px #000;
+    background-color: #f9f9f9;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1em;
+    color: #7f8c8d;
+}
+
+.istec{
+    width: 500px;
+    height: 650px;
+    background-color: #7f8c8d;
+    margin-left: 1100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10%;
+}
+
+.otvetchik{
+    position: absolute;
+    width: 500px;
+    height: 650px;
+    margin-left: 100px;
+    top: 1100px;
+    background-color: #7f8c8d;
+    margin-left: 10%;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10%;
+}
+.is{
+    margin-left: 355px;
+}
+.ot{
+    position: absolute;
+    margin-left: 1290px;
+    bottom: -135px;
+}
+/* input{
+   /*  border: none; /* Убираем границу */
+   /*  outline: none; /* Убираем контур */
+    /* background-color: #0e582d; /* Цвет фона */
+    /* padding: 10px; /* Отступы внутри поля */
+    /* font-size: 16px; /* Размер текста */
+/* }     
+textarea{
+    border: none; /* Убираем границу */
+  /*   outline: none; /* Убираем контур */
+ /*    background-color: #0e582d; /* Цвет фона */
+ /*    padding: 10px; /* Отступы внутри поля */
+/*     font-size: 16px; /* Размер текста */
+/* }

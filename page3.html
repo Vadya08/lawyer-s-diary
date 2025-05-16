@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style3.css">
+  <title>Юридическая форма</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e582d;
+      padding: 20px;
+      color: #333;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #111;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    textarea {
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <a href="page2.html" class="arrow-link"> &lt; </a>
+        <a href="page4.html" class="arrow-link"> &gt; </a>
+    </div>
+
+  <h1>Подготовка иска</h1>
+
+  <div class="section">
+    <h2>Источники права</h2>
+    <input type="text" class="source-input" placeholder="Укажите источники (Кодексы, ГПК, Постановления суда и т.д.)">
+  </div>
+  
+  <div class="section">
+    <h2>Судебная практика</h2>
+    <textarea class="practice-text" placeholder="Введите ссылки или описания судебной практики"></textarea>
+  </div>
+  
+  <div class="section">
+    <h2>Список документов</h2>
+    <textarea class="documents-text" placeholder="Перечислите документы, которые нужно собрать или обработать"></textarea>
+  </div>
+  
+  <div class="section">
+    <h2>Досудебная процедура</h2>
+    <textarea class="pretrial-text" placeholder="Опишите предпринятые досудебные действия"></textarea>
+  </div>
+  
+  <div class="section">
+    <h2>Ответчик</h2>
+    <input type="text" class="defendant-name" placeholder="ФИО или название организации">
+    <input type="text" class="defendant-capacity" placeholder="Проверка дееспособности и правоспособности">
+  </div>
+  
+  <div class="section">
+    <h2>Анализ риска</h2>
+    <textarea class="risk-analysis" placeholder="Опишите возможные риски при подаче иска"></textarea>
+  </div>
+  
+  <div class="section">
+    <h2>Перед подачей иска:</h2>
+    <ul>
+      <li>Соблюдение претензионного порядка</li>
+      <li>Расчет государственной пошлины</li>
+      <li>Запросы для обеспечения доказательств</li>
+      <li>Данные ответчика: дееспособность и правоспособность</li>
+    </ul>
+  </div>
+  
+  <div class="section">
+    <h2>Ознакомиться с НПА</h2>
+    <ul>
+      <li>Судебная практика по похожим делам</li>
+      <li>Постановления ВС</li>
+      <li>Критерии, подлежащие доказыванию</li>
+      <li>Корректная формулировка требований</li>
+    </ul>
+  </div>
+  
+  <div class="section">
+    <h2>План защиты</h2>
+    <label>1. Ходатайство о вызове свидетелей</label>
+    <input type="text" class="witness-request" placeholder="Введите ФИО, при необходимости — копию удостоверения личности">
+  
+    <label>2. Ходатайство об истребовании доказательств</label>
+    <textarea class="evidence-request" placeholder="Подтвердите, почему не можете их предоставить самостоятельно"></textarea>
+  
+    <label>3. Ходатайство о назначении экспертизы</label>
+    <textarea class="expert-request" placeholder="Подготовьте вопросы эксперту"></textarea>
+  </div>
+  
+  <div class="section">
+    <h2>Критерии, которые необходимо доказать</h2>
+    <textarea class="evidence-criteria" placeholder="Опишите доказательственную базу, ссылаясь на нормы статей"></textarea>
+  </div>
+  
+  <script>
+  // Сохраняем все значения input'ов одного класса как массив
+  function saveMultipleInputs(className, key) {
+    const inputs = document.querySelectorAll('.' + className);
+    const values = Array.from(inputs).map(input => input.value);
+    localStorage.setItem(key, JSON.stringify(values));
+  }
+  
+  // Загружаем все значения обратно
+  function loadMultipleInputs(className, key) {
+    const inputs = document.querySelectorAll('.' + className);
+    const values = JSON.parse(localStorage.getItem(key)) || [];
+    inputs.forEach((input, index) => {
+      input.value = values[index] || '';
+    });
+  }
+  
+  // Сохранение данных
+  function saveData() {
+    // Сохраняем данные каждого input'а и textarea
+    const fields = [
+      { className: 'source-input', key: 'sources' },
+      { className: 'practice-text', key: 'practice' },
+      { className: 'documents-text', key: 'documents' },
+      { className: 'pretrial-text', key: 'pretrial' },
+      { className: 'defendant-name', key: 'defendant_name' },
+      { className: 'defendant-capacity', key: 'defendant_capacity' },
+      { className: 'risk-analysis', key: 'risk_analysis' },
+      { className: 'witness-request', key: 'witness_request' },
+      { className: 'evidence-request', key: 'evidence_request' },
+      { className: 'expert-request', key: 'expert_request' },
+      { className: 'evidence-criteria', key: 'evidence_criteria' }
+    ];
+  
+    fields.forEach(field => {
+      const input = document.querySelector(`.${field.className}`);
+      if (input) {
+        localStorage.setItem(field.key, input.value);
+      }
+    });
+  }
+  
+  // Загрузка данных при загрузке страницы
+  window.onload = function () {
+    // Загружаем данные для всех полей
+    const fields = [
+      { className: 'source-input', key: 'sources' },
+      { className: 'practice-text', key: 'practice' },
+      { className: 'documents-text', key: 'documents' },
+      { className: 'pretrial-text', key: 'pretrial' },
+      { className: 'defendant-name', key: 'defendant_name' },
+      { className: 'defendant-capacity', key: 'defendant_capacity' },
+      { className: 'risk-analysis', key: 'risk_analysis' },
+      { className: 'witness-request', key: 'witness_request' },
+      { className: 'evidence-request', key: 'evidence_request' },
+      { className: 'expert-request', key: 'expert_request' },
+      { className: 'evidence-criteria', key: 'evidence_criteria' }
+    ];
+  
+    fields.forEach(field => {
+      const input = document.querySelector(`.${field.className}`);
+      if (input) {
+        input.value = localStorage.getItem(field.key) || '';
+      }
+    });
+  };
+  </script>
+<center>
+  <button class="save-button" onclick="saveData()">Сохранить</button>
+</center>
+<br><br>
+<center>
+<a href="page1.html" class="sweet-link">1</a>
+<a href="page2.html" class="sweet-link">2</a>
+<a href="page4.html" class="sweet-link">4</a>
+</center>
+
+</body>
+</html>

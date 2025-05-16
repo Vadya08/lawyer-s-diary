@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      input{
+        border: none; /* Убираем границу */
+    outline: none; /* Убираем контур */
+    background-color: #0e582d; /* Цвет фона */
+    padding: 10px; /* Отступы внутри поля */
+    font-size: 16px; /* Размер текста */
+  }     
+        textarea{
+        border: none; /* Убираем границу */
+    outline: none; /* Убираем контур */
+    background-color: #0e582d; /* Цвет фона */
+    padding: 10px; /* Отступы внутри поля */
+    font-size: 16px; /* Размер текста */
+  }
+              
+        body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          background-color: #0e582d;
+        }
+        h2 {
+          text-align: center;
+        }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 30px;
+        }
+        table, th, td {
+          border: 1px solid #000;
+        }
+        th, td {
+          padding: 8px;
+          text-align: left;
+        }
+        input[type="text"] {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 5px;
+        }
+        .section {
+          margin-bottom: 20px;
+        }
+        .section label {
+          display: block;
+          margin: 8px 0 4px;
+        }
+        textarea {
+          width: 100%;
+          height: 60px;
+          box-sizing: border-box;
+        }
+        
+        /* Основные стили для ссылок */
+        .sweet-link {
+            text-decoration: none;
+            background-color: #000000;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            margin: 5px;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        /* Эффект при наведении */
+        .sweet-link:hover {
+            background-color: #0ebb46;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Эффект при нажатии */
+        .sweet-link:active {
+            transform: translateY(2px);
+            box-shadow: none;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+        
+        .arrow-link {
+            text-decoration: none;
+            font-size: 30px;
+            color: #fff;
+            background-color: #000000;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        /* Эффект при наведении */
+        .arrow-link:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+        
+        /* Эффект при нажатии */
+        .arrow-link:active {
+            transform: scale(1);
+            background-color: #388e3c;
+        }
+        button {
+    background-color: #4CAF50; /* Зеленый цвет фона */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Отступы */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавный переход */
+  }
+
+  /* Эффект при наведении */
+  button:hover {
+    background-color: #45a049; /* Темно-зеленый фон при наведении */
+    transform: scale(1.1); /* Увеличение кнопки */
+  }
+
+  /* Эффект при нажатии */
+  button:active {
+    background-color: #387e3a; /* Еще более темный зеленый при нажатии */
+    transform: scale(1); /* Вернуться к обычному размеру */
+  }
+.kvalification{
+    margin-left: 150px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="page3.html" class="arrow-link"> &lt; </a>
+    </div>
+    <h2>Номер дела: <input type="text" placeholder="Введите номер дела" class="case-number"></h2>
+
+    <table>
+        <tr>
+            <th>Дата</th>
+            <th>Задача</th>
+            <th>Срок</th>
+            <th>Статус</th>
+            <th>Следующее действие</th>
+            <th>Промежуточные итоги</th>
+        </tr>
+        <!-- Пример строки -->
+        <tr>
+            <td><input type="text" class="date" placeholder="Введите"></td>
+            <td><input type="text" class="task" placeholder="Введите"></td>
+            <td><input type="text" class="deadline" placeholder="Введите"></td>
+            <td><input type="text" class="status" placeholder="Введите"></td>
+            <td><input type="text" class="next-action" placeholder="Введите"></td>
+            <td><input type="text" class="interim-results" placeholder="Введите"></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="date" placeholder="Введите"></td>
+          <td><input type="text" class="task" placeholder="Введите"></td>
+          <td><input type="text" class="deadline" placeholder="Введите"></td>
+          <td><input type="text" class="status" placeholder="Введите"></td>
+          <td><input type="text" class="next-action" placeholder="Введите"></td>
+          <td><input type="text" class="interim-results" placeholder="Введите"></td>
+      </tr>
+      <tr>
+        <td><input type="text" class="date" placeholder="Введите"></td>
+        <td><input type="text" class="task" placeholder="Введите"></td>
+        <td><input type="text" class="deadline" placeholder="Введите"></td>
+        <td><input type="text" class="status" placeholder="Введите"></td>
+        <td><input type="text" class="next-action" placeholder="Введите"></td>
+        <td><input type="text" class="interim-results" placeholder="Введите"></td>
+    </tr>
+    <tr>
+      <td><input type="text" class="date" placeholder="Введите"></td>
+      <td><input type="text" class="task" placeholder="Введите"></td>
+      <td><input type="text" class="deadline" placeholder="Введите"></td>
+      <td><input type="text" class="status" placeholder="Введите"></td>
+      <td><input type="text" class="next-action" placeholder="Введите"></td>
+      <td><input type="text" class="interim-results" placeholder="Введите"></td>
+  </tr>
+  <tr>
+    <td><input type="text" class="date" placeholder="Введите"></td>
+    <td><input type="text" class="task" placeholder="Введите"></td>
+    <td><input type="text" class="deadline" placeholder="Введите"></td>
+    <td><input type="text" class="status" placeholder="Введите"></td>
+    <td><input type="text" class="next-action" placeholder="Введите"></td>
+    <td><input type="text" class="interim-results" placeholder="Введите"></td>
+</tr>
+<tr>
+  <td><input type="text" class="date" placeholder="Введите"></td>
+  <td><input type="text" class="task" placeholder="Введите"></td>
+  <td><input type="text" class="deadline" placeholder="Введите"></td>
+  <td><input type="text" class="status" placeholder="Введите"></td>
+  <td><input type="text" class="next-action" placeholder="Введите"></td>
+  <td><input type="text" class="interim-results" placeholder="Введите"></td>
+</tr>
+<tr>
+  <td><input type="text" class="date" placeholder="Введите"></td>
+  <td><input type="text" class="task" placeholder="Введите"></td>
+  <td><input type="text" class="deadline" placeholder="Введите"></td>
+  <td><input type="text" class="status" placeholder="Введите"></td>
+  <td><input type="text" class="next-action" placeholder="Введите"></td>
+  <td><input type="text" class="interim-results" placeholder="Введите"></td>
+</tr>
+<tr>
+  <td><input type="text" class="date" placeholder="Введите"></td>
+  <td><input type="text" class="task" placeholder="Введите"></td>
+  <td><input type="text" class="deadline" placeholder="Введите"></td>
+  <td><input type="text" class="status" placeholder="Введите"></td>
+  <td><input type="text" class="next-action" placeholder="Введите"></td>
+  <td><input type="text" class="interim-results" placeholder="Введите"></td>
+</tr>
+<tr>
+  <td><input type="text" class="date" placeholder="Введите"></td>
+  <td><input type="text" class="task" placeholder="Введите"></td>
+  <td><input type="text" class="deadline" placeholder="Введите"></td>
+  <td><input type="text" class="status" placeholder="Введите"></td>
+  <td><input type="text" class="next-action" placeholder="Введите"></td>
+  <td><input type="text" class="interim-results" placeholder="Введите"></td>
+</tr>
+<tr>
+  <td><input type="text" class="date" placeholder="Введите"></td>
+  <td><input type="text" class="task" placeholder="Введите"></td>
+  <td><input type="text" class="deadline" placeholder="Введите"></td>
+  <td><input type="text" class="status" placeholder="Введите"></td>
+  <td><input type="text" class="next-action" placeholder="Введите"></td>
+  <td><input type="text" class="interim-results" placeholder="Введите"></td>
+</tr>
+        <!-- Добавить дополнительные строки, если нужно -->
+    </table>
+
+    <div class="section">
+        <h3>РЕФЛЕКСИЯ: ПОДВЕДИ ИТОГИ И СДЕЛАЙ ВЫВОДЫ:</h3>
+        <label>1. Что проделано верно:</label>
+        <textarea class="correct-actions" placeholder="Введите"></textarea>
+
+        <label>2. Какие дополнить на будущее моменты:</label>
+        <textarea class="correct-actions" placeholder="Введите"></textarea>
+
+        <label>3. Что я мог сделать лучше:</label>
+        <textarea class="correct-actions" placeholder="Введите"></textarea>
+
+        <label>4. Что я узнал в процессе:</label>
+        <textarea class="correct-actions" placeholder="Введите"></textarea>
+    </div>
+
+    <script>
+        // Сохраняем все значения input'ов одного класса как массив
+        function saveMultipleInputs(className, key) {
+            const inputs = document.querySelectorAll('.' + className);
+            const values = Array.from(inputs).map(input => input.value);
+            localStorage.setItem(key, JSON.stringify(values));
+        }
+
+        // Загружаем все значения обратно
+        function loadMultipleInputs(className, key) {
+            const inputs = document.querySelectorAll('.' + className);
+            const values = JSON.parse(localStorage.getItem(key)) || [];
+            inputs.forEach((input, index) => {
+                input.value = values[index] || '';
+            });
+        }
+
+        // Сохранение данных
+        function saveData() {
+            const fields = [
+                { className: 'case-number', key: 'case_number' },
+                { className: 'date', key: 'dates' },
+                { className: 'task', key: 'tasks' },
+                { className: 'deadline', key: 'deadlines' },
+                { className: 'status', key: 'statuses' },
+                { className: 'next-action', key: 'next_actions' },
+                { className: 'interim-results', key: 'interim_results' },
+                { className: 'correct-actions', key: 'reflections' }
+            ];
+
+            fields.forEach(field => {
+                const input = document.querySelectorAll('.' + field.className);
+                if (input.length > 0) {
+                    const values = Array.from(input).map(item => item.value);
+                    localStorage.setItem(field.key, JSON.stringify(values));
+                }
+            });
+        }
+
+        // Загрузка данных при загрузке страницы
+        window.onload = function () {
+            const fields = [
+                { className: 'case-number', key: 'case_number' },
+                { className: 'date', key: 'dates' },
+                { className: 'task', key: 'tasks' },
+                { className: 'deadline', key: 'deadlines' },
+                { className: 'status', key: 'statuses' },
+                { className: 'next-action', key: 'next_actions' },
+                { className: 'interim-results', key: 'interim_results' },
+                { className: 'correct-actions', key: 'reflections' }
+            ];
+
+            fields.forEach(field => {
+                loadMultipleInputs(field.className, field.key);
+            });
+        };
+    </script>
+
+    <center>
+        <button class="save-button" onclick="saveData()">Сохранить</button>
+    </center>
+
+    <br>
+    <center>
+        <a href="page1.html" class="sweet-link">1</a>
+        <a href="page2.html" class="sweet-link">2</a>
+        <a href="page3.html" class="sweet-link">3</a>
+    </center>
+
+</body>
+</html>
